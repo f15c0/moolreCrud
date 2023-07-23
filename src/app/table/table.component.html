@@ -5,8 +5,9 @@
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Actions</th>
-        <!-- Changed to "Actions" -->
+        <th class="th-action">
+          Actions <span class="material-icons"> commit </span>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -19,13 +20,13 @@
             visibility
           </span>
           <span class="material-icons edit-user icon-sm" (click)="onEdit(user)">
-            edit
+            edit_note
           </span>
           <span
             class="material-icons delete-user icon-sm"
             (click)="onDelete(user)"
           >
-            delete_outline
+            delete
           </span>
         </td>
       </tr>

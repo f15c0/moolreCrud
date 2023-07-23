@@ -10,10 +10,14 @@
     border-collapse: collapse;
 }
 
-.user-table th,
+.user-table th{
+    padding: 6px ;
+    text-align: left;
+}
 .user-table td {
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding: 8px;
+    font-size: 0.9em;
    
 }
 
@@ -29,25 +33,20 @@
 }
 
 /* Style the "Actions" column */
-.user-table .actions-cell {
+.actions-cell {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.user-table .actions-cell button {
-    cursor: pointer;
-    padding: 6px 12px;
-    /* Slightly reduced padding for buttons */
-    font-size: 14px;
-    /* Increased font size for buttons */
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+.th-action{
+display: flex;
+justify-content: center;
+text-align: center;
 }
 
 .view-user{
-    color: #895d06;
+    color: #06765e;
     cursor: pointer;
 }
 
@@ -112,7 +111,7 @@
     /* Stack the table columns on mobile screens */
     .user-table tbody tr {
         display: block;
-        margin-top: 14px;
+        margin-top: 26px;
         
         border-left: 8px dashed #FFBC38;
         border-radius: 6px;

@@ -23,5 +23,16 @@ button:hover{
     text-align: center;
     font-size: 1.4rem;
     font-weight: 500;
+    padding: 0 8px;
     
+}
+
+.title-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-color {
+    color: #142a4a;
 }
