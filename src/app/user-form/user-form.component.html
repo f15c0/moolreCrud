@@ -87,5 +87,6 @@
     <button type="submit" [disabled]="userForm.invalid">
       {{ userForm.controls["id"].value ? "Update User" : "Add User" }}
     </button>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   </form>
 </div>

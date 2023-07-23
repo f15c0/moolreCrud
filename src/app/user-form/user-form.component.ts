@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { UserService } from '../services/user.service';
 import { User } from '../user.interface';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-form',
@@ -10,14 +11,15 @@ import { User } from '../user.interface';
   styleUrls: ['./user-form.component.css'],
 })
 export class UserFormComponent implements OnInit {
-  userForm!: FormGroup; // Declare userForm as FormGroup
+  userForm!: FormGroup; 
   user: User = { id: 0, name: '', email: '', password: '' };
+  errorMessage: string = '';
 
   constructor(
     private userService: UserService,
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder // Inject FormBuilder
+    private formBuilder: FormBuilder 
   ) {}
 
   ngOnInit() {
@@ -45,28 +47,33 @@ export class UserFormComponent implements OnInit {
   }
 
   handleFormSubmit() {
-    if (this.userForm.controls['id'].value) {
-      // If the userForm.controls['id'].value is truthy, it means we are in editing mode
-      this.userService.updateUser(this.userForm.value).subscribe({
-       next: (data) => {
-          console.log('User updated:', data);
-          this.router.navigate(['/users']);
-        },
-       error: (error) => {
-          console.error('Error updating user:', error);
-        }
+  if (this.userForm.controls['id'].value) {
+    // If the userForm.controls['id'].value is truthy, it means we are in editing mode
+    this.userService.updateUser(this.userForm.value).subscribe({
+      next: (data) => {
+        console.log('User updated:', data);
+        this.router.navigate(['/users']);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error('Error updating user:', error);
+        // Handle the error response and display appropriate notification to the user
+        this.errorMessage = error.error['error'];
+      }
     });
-    } else {
-      // If the userForm.controls['id'].value is falsy, it means we are in adding mode
-      this.userService.addUser(this.userForm.value).subscribe({
-       next: (data) => {
-          console.log('User added:', data);
-          this.router.navigate(['/users']);
-        },
-       error: (error) => {
-          console.error('Error adding user:', error);
-        }
+  } else {
+    // If the userForm.controls['id'].value is falsy, it means we are in adding mode
+    this.userService.addUser(this.userForm.value).subscribe({
+      next: (data) => {
+        console.log('User added:', data);
+        this.router.navigate(['/users']);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error('Error adding user:', error);
+        // Handle the error response and display appropriate notification to the user
+        this.errorMessage = error.error['error'];
+      }
     });
-    }
   }
+}
+
 }

@@ -30,15 +30,15 @@ export class UserDetailsComponent implements OnInit {
       const userIdNumber = parseInt(userId, 10);
 
       // Use the dynamic userId received from the route parameter
-      this.userService.getUserDetails(userIdNumber).subscribe(
-        (data) => {
+      this.userService.getUserDetails(userIdNumber).subscribe({
+        next:(data) => {
           // Update the user property with the received data
           this.user = data;
         },
-        (error) => {
+        error:(error) => {
           console.error('Error fetching user details:', error);
         }
-      );
+    });
     }
   }
 }
