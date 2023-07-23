@@ -6,17 +6,19 @@
   </div>
   <nav>
     <ul>
-      <li>
+      <li class="header-icon">
         <a
           routerLink="/users"
           routerLinkActive="router-link-active"
           [routerLinkActiveOptions]="{ exact: true }"
-          >Users
+          ><span class="material-icons users-icon"> group </span>
+          <span class="user-text">Users</span>
         </a>
       </li>
       <li>
         <a routerLink="/users/add" routerLinkActive="router-link-active"
-          >Add User</a
+          ><span class="material-icons users-icon"> playlist_add </span
+          ><span class="user-text">Add User</span></a
         >
       </li>
     </ul>

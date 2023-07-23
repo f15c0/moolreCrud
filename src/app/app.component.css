@@ -8,6 +8,7 @@ header {
     align-items: center;
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -33,6 +34,10 @@ nav li a {
     text-decoration: none;
     color: #142a4a;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 nav li a:hover {
@@ -60,8 +65,11 @@ nav li:last-child {
 /* Style for active link */
 nav li a.router-link-active {
     color: #fcfcfc;
-    border-bottom: 4px solid #fff;
-    padding-bottom: 18px;
+    border-bottom: 2px solid #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Footer styles */
@@ -87,19 +95,23 @@ nav li a.router-link-active {
     color: #FFBC38;
 }
 
+.users-icon{
+    display: none;
+}
+
 
 /* Media Queries for Responsive Design */
 
-/* Media Query for smaller screens (adjust font size) */
+
 @media (max-width: 767px) {
     .logo img {
         height: 24px;
-        /* Smaller logo size for mobile devices */
+        
     }
 
     .app-title {
         font-size: 14px;
-        /* Smaller font size for header text on mobile devices */
+       
     }
 }
 
@@ -124,7 +136,13 @@ nav li a.router-link-active {
     nav ul {
         justify-content: center;
     }
-
+                .users-icon {
+                    display:inline;
+                }
+                .user-text{
+                    display: none;
+                }
+    
         .app-title {
             display: none;
             /* hidden on very small devices */
