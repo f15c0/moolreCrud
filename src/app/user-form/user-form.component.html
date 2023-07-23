@@ -1,0 +1,91 @@
+<div class="user-form-container">
+  <!-- Using the 'userForm.controls['id'].value' to determine if the form is for editing or adding -->
+  <h2>{{ userForm.controls["id"].value ? "Edit User" : "Add User" }}</h2>
+  <form (ngSubmit)="handleFormSubmit()" [formGroup]="userForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="patrickdoe@moolre.com"
+        name="email"
+        required
+        formControlName="email"
+      />
+      <!-- Add error message for email validation -->
+      <div
+        *ngIf="
+          userForm.controls['email'].invalid &&
+          (userForm.controls['email'].dirty ||
+            userForm.controls['email'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="userForm.controls['email'].errors?.['required']">
+          Email is required.
+        </div>
+        <div *ngIf="userForm.controls['email'].errors?.['email']">
+          Invalid email address.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        placeholder="John Doe"
+        name="name"
+        required
+        formControlName="name"
+      />
+      <!-- Add error message for name validation -->
+      <div
+        *ngIf="
+          userForm.controls['name'].invalid &&
+          (userForm.controls['name'].dirty || userForm.controls['name'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="userForm.controls['name'].errors?.['required']">
+          Name is required.
+        </div>
+        <div *ngIf="userForm.controls['name'].errors?.['minlength']">
+          Name must be at least 3 characters.
+        </div>
+        <div *ngIf="userForm.controls['name'].errors?.['maxlength']">
+          Name cannot exceed 50 characters.
+        </div>
+      </div>
+    </div>
+    <!-- Show the password input only when adding a new user -->
+    <div class="form-group" *ngIf="!userForm.controls['id'].value">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        required
+        formControlName="password"
+      />
+      <!-- Add error message for password validation -->
+      <div
+        *ngIf="
+          userForm.controls['password'].invalid &&
+          (userForm.controls['password'].dirty ||
+            userForm.controls['password'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="userForm.controls['password'].errors?.['required']">
+          Password is required.
+        </div>
+        <div *ngIf="userForm.controls['password'].errors?.['minlength']">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">
+      {{ userForm.controls["id"].value ? "Update User" : "Add User" }}
+    </button>
+  </form>
+</div>

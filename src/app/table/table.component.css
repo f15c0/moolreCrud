@@ -1,0 +1,64 @@
+/* user-table.component.css */
+
+.container {
+    
+    padding: 20px;
+    margin: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+    border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+    padding: 8px;
+    
+}
+
+.user-table th {
+    /* border-left: 1px solid #ccc; */
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Add hover effect on table rows */
+.user-table tbody tr:hover {
+    background-color: rgba(255, 216, 137, 0.1);
+}
+
+/* Style the "Actions" column */
+.user-table .actions-cell {
+    
+    display: flex;
+    justify-content: space-evenly;
+    /* Align buttons to the right */
+    align-items: center;
+    /* Center buttons vertically */
+}
+
+.user-table .actions-cell button {
+    cursor: pointer;
+    padding: 4px 8px;
+    /* Smaller padding */
+    font-size: 12px;
+    /* Smaller font size */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.user-table .actions-cell button.edit-btn {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.user-table .actions-cell button.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+

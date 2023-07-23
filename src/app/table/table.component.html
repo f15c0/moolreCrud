@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+        <!-- Changed to "Actions" -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td class="actions-cell">
+          <button class="view-btn" (click)="onView(user)">View</button>
+          <button class="edit-btn" (click)="onEdit(user)">Edit</button>
+          <button class="delete-btn" (click)="onDelete(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,89 @@
+/* app.component.css (or global styles.css) */
+
+header {
+    margin: 0;
+    background-color: #FFBC38;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 32px;
+    margin-right: 8px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    
+}
+
+nav li {
+    margin-right: 20px;  
+}
+ nav li a{
+    text-decoration: none;
+    color:#142a4a;
+    font-weight: 500;
+ }
+
+
+ nav li a:hover {
+     text-decoration: none;
+     color: #fcfcfc;
+     font-weight: 500;
+ }
+nav li:last-child {
+    margin-right: 0;
+}
+
+.app-title {
+    color: #142a4a;
+}
+
+.app-title:hover {
+    color: #fcfcfc;
+    transition: ease-in-out;
+    transition-duration: 150;
+}
+
+/* Style for active link */
+nav li a.router-link-active {
+    color: #fcfcfc; 
+    border-bottom: 4px solid #fff;
+    padding-bottom: 18px;
+    
+}
+/* Footer styles */
+.footer {
+    color: #142a4a;
+    padding: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   
+}
+
+.footer-content {
+    text-align: center;
+    
+}
+
+.footer a{
+    text-decoration: none;
+    color: #142a4a;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: #FFBC38;
+}
