@@ -115,8 +115,8 @@
         margin-top: 14px;
         
         border-left: 8px dashed #FFBC38;
-        border-radius: 1px;
-        /* border-bottom: 1px dashed #142a4a; */
+        border-radius: 6px;
+        border-bottom: 2px solid #FFBC38;
         
 
         /* Add a border between rows */
