@@ -15,9 +15,15 @@
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
         <td class="actions-cell">
-          <button class="view-btn" (click)="onView(user)">View</button>
-          <button class="edit-btn" (click)="onEdit(user)">Edit</button>
-          <button class="delete-btn" (click)="onDelete(user)">Delete</button>
+          <span class="material-icons view-user" (click)="onView(user)">
+            visibility
+          </span>
+          <span class="material-icons edit-user" (click)="onEdit(user)">
+            edit
+          </span>
+          <span class="material-icons delete-user" (click)="onDelete(user)">
+            delete_outline
+          </span>
         </td>
       </tr>
     </tbody>

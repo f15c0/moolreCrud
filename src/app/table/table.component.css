@@ -20,6 +20,7 @@
 .user-table th {
     background-color: #f2f2f2;
     font-weight: bold;
+    color: #142a4a;
 }
 
 /* Add hover effect on table rows */
@@ -45,14 +46,19 @@
     transition: background-color 0.3s ease;
 }
 
-.user-table .actions-cell button.edit-btn {
-    background-color: #007bff;
-    color: #fff;
+.view-user{
+    color: #895d06;
+    cursor: pointer;
 }
 
-.user-table .actions-cell button.delete-btn {
-    background-color: #dc3545;
-    color: #fff;
+.edit-user {
+    color: #1a6fef;
+    cursor: pointer;
+}
+
+.delete-user {
+    color: #c21717;
+    cursor: pointer;
 }
 
 /* For mobile screens (max-width: 767px) */
@@ -78,7 +84,7 @@
     /* Stack the table columns on mobile screens */
     .user-table tbody tr {
         display: block;
-        border-bottom: 2px solid #af3f3f;
+        border-bottom: 3px solid #af3f3f;
         /* Add a border between rows */
     }
 

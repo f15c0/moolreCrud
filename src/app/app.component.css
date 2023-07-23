@@ -126,7 +126,7 @@ nav li a.router-link-active {
     }
 
         .app-title {
-            visibility: hidden;
+            display: none;
             /* hidden on very small devices */
         }
 
