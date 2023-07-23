@@ -66,9 +66,9 @@
 
     .user-table th,
     .user-table td {
-        padding: 6px;
+        padding: 0 3px;
        
-        font-size: 12px;
+        font-size: 14px;
         
     }
 
@@ -84,20 +84,26 @@
         display: none;  
     }
             .icon-sm{
-                font-size: 14px;
+                font-size: 16px;
                 padding: 0 16px;
             }
         .user-table td:nth-child(2){
             color: #142a4a;
+            font-weight: 600;
+            padding-bottom: 3px;
             border-bottom: none;
         }
                 .user-table td:nth-child(3) {
-                    color: #7038ff;
+                    color: #1b0653;
+                    font-weight: 200;
+                    font-size: 0.8em;
+                    padding-bottom: 14px;
                     border-top: none;
                 }
 
                 .user-table td:nth-child(4){
-                    justify-content: left;
+                    justify-content: center;
+                        align-items: center;
                     
                 }
 
@@ -107,16 +113,16 @@
         display: block;
         margin-top: 10px;
         
-        border-left: 8px solid #FFBC38;
-        border-radius: 12px;
-        border-bottom: 2px solid #FFBC38;
+        border-bottom: 4px solid #FFBC38;
+        border-radius: 8px;
+        
 
         /* Add a border between rows */
     }
 
     .user-table td {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         border: none;
         
