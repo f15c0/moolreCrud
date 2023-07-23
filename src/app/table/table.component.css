@@ -61,8 +61,8 @@
     cursor: pointer;
 }
 
-/* For mobile screens (max-width: 767px) */
-@media (max-width: 679px) {
+
+@media (max-width: 620px) {
 
     .user-table th,
     .user-table td {
@@ -72,19 +72,45 @@
         
     }
 
+    
+
     /* Hide less important columns on mobile screens */
     .user-table th:nth-child(1),
+    .user-table th:nth-child(2),
     .user-table td:nth-child(1),
     .user-table th:nth-child(3),
-    .user-table th:nth-child(4),
-    .user-table td:nth-child(4) {
-        display: none;
+    .user-table th:nth-child(4)
+     {
+        display: none;  
     }
+            .icon-sm{
+                font-size: 14px;
+                padding: 0 16px;
+            }
+        .user-table td:nth-child(2){
+            color: #142a4a;
+            border-bottom: none;
+        }
+                .user-table td:nth-child(3) {
+                    color: #7038ff;
+                    border-top: none;
+                }
+
+                .user-table td:nth-child(4){
+                    justify-content: left;
+                    
+                }
+
 
     /* Stack the table columns on mobile screens */
     .user-table tbody tr {
         display: block;
-        border-bottom: 3px solid #af3f3f;
+        margin-top: 10px;
+        
+        border-left: 8px solid #FFBC38;
+        border-radius: 12px;
+        border-bottom: 2px solid #FFBC38;
+
         /* Add a border between rows */
     }
 
@@ -92,11 +118,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border: none;
+        
     }
 
-    /* Center align the content in the cells */
-    .user-table th,
-    .user-table td {
-        text-align: center;
-    }
+    
 }

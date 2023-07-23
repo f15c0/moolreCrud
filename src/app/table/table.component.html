@@ -15,13 +15,16 @@
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
         <td class="actions-cell">
-          <span class="material-icons view-user" (click)="onView(user)">
+          <span class="material-icons view-user icon-sm" (click)="onView(user)">
             visibility
           </span>
-          <span class="material-icons edit-user" (click)="onEdit(user)">
+          <span class="material-icons edit-user icon-sm" (click)="onEdit(user)">
             edit
           </span>
-          <span class="material-icons delete-user" (click)="onDelete(user)">
+          <span
+            class="material-icons delete-user icon-sm"
+            (click)="onDelete(user)"
+          >
             delete_outline
           </span>
         </td>
