@@ -66,10 +66,11 @@ nav li:last-child {
 nav li a.router-link-active {
     color: #fcfcfc;
     border-bottom: 2px solid #fff;
-    
+    padding-bottom: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Footer styles */
@@ -97,6 +98,7 @@ nav li a.router-link-active {
 
 .users-icon{
     display: none;
+    font-size: 1.8em;
 }
 
 
