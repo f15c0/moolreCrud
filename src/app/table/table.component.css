@@ -104,6 +104,7 @@
                 .user-table td:nth-child(4){
                     justify-content: center;
                         align-items: center;
+                        padding-bottom: 4px;
                     
                 }
 
@@ -111,10 +112,11 @@
     /* Stack the table columns on mobile screens */
     .user-table tbody tr {
         display: block;
-        margin-top: 10px;
+        margin-top: 14px;
         
-        border-bottom: 4px solid #FFBC38;
-        border-radius: 8px;
+        border-left: 8px dashed #FFBC38;
+        border-radius: 1px;
+        /* border-bottom: 1px dashed #142a4a; */
         
 
         /* Add a border between rows */
