@@ -1,6 +1,9 @@
 <div class="user-form-container">
   <!-- Using the 'userForm.controls['id'].value' to determine if the form is for editing or adding -->
-  <h2>{{ userForm.controls["id"].value ? "Edit User" : "Add User" }}</h2>
+  <h2 class="form-header">
+    {{ userForm.controls["id"].value ? "Edit User" : "Add User" }}
+    <span class="material-icons form-icon"> join_left </span>
+  </h2>
   <form (ngSubmit)="handleFormSubmit()" [formGroup]="userForm">
     <div class="form-group">
       <label for="name">Name</label>
