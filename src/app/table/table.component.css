@@ -60,6 +60,35 @@ text-align: center;
     cursor: pointer;
 }
 
+/* CSS for the search container */
+.user-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* CSS for the search input */
+.user-search input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* CSS for the search input focus state */
+.user-search input:focus {
+    outline: none;
+    border-color: #FFBC38;
+}
+
+/* CSS for the search input placeholder */
+.user-search input::placeholder {
+    color: #888;
+}
 
 @media (max-width: 620px) {
 
@@ -71,6 +100,15 @@ text-align: center;
         
     }
 
+        .user-search input {
+            width: 224px;
+            padding: 8px;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease-in-out;
+        }
     
 
     /* Hide less important columns on mobile screens */

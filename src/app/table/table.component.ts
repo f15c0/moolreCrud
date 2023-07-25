@@ -11,6 +11,12 @@ import { User } from '../user.interface'
 export class TableComponent implements OnInit {
   users: User[] = [];
 
+  searchText: string = ''; // The variable to hold the search input
+  
+  get filteredUsers() {
+    return this.users.filter(user => user.email.toLowerCase().includes(this.searchText.toLowerCase()));
+  }
+
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {

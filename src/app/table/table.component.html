@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="user-search">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search by Email" />
+  </div>
   <table class="user-table">
     <thead>
       <tr>
@@ -11,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
+      <tr *ngFor="let user of filteredUsers">
         <td>{{ user.id }}</td>
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>

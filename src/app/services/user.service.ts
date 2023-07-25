@@ -8,7 +8,7 @@ import { User } from '../user.interface'
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://lawrichfreight.com/moolre/api';
+  private apiUrl = 'http://localhost/moolre/api';
 
   constructor(private http: HttpClient) {}
 
